@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>openJCD's photography blog</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+
+        :root {
+            --primary-background-colour: #1A1A1D;
+            --primary-text-colour: #b5b5b6;
+            --tertiary-foreground-colour: #6F2232;
+            --secondary-foreground-colour: #950750;
+            --primary-foreground-colour: #C3073F;
+            --standard-margin:2.5vh;
+            --primary-hover-colour: #c42c59;
+            --default-row-size: 240px;
+            --default-column-size: 240px;
+        }
+
+        html {
+            background-color: var(--primary-background-colour);
+            color: var(--primary-text-colour);
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+        }
+
+        a {
+            text-decoration:none;
+            color:aquamarine;
+        }
+        
+        p {
+            text-align: center;
+        }
+        
+        .navbar {
+            /* float:right; */
+            background-color: var(--tertiary-foreground-colour);  
+            overflow: hidden;
+            border-style: solid;
+            border-color: var(--secondary-foreground-colour);
+            /* height:50px; */
+            border-radius: 5px;
+            border-width: 1px;
+            box-shadow: none;
+            transition: 0.3s;
+            margin: var(--standard-margin);
+        }
+        .navbar::hover {
+            box-shadow: 0 0 5px var(--primary-hover-colour);
+        }
+        .nav-link {
+            float: left;
+            color: var(--primary-text-colour);
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            background-color:var(--primary-foreground-colour);
+            font-family: 'Monsterrat', sans-serif;
+            font-weight: 100;
+            transition-property: background-color;
+            transition-duration: 0.3s;
+            transition-delay: 0;
+        }
+        .nav-link:hover {
+            background-color: var(--primary-hover-colour);
+        }
+        .title-wrapper {
+            padding-top: 5pt;
+            padding-bottom: 5pt;
+            text-align: center;
+            display:block;
+        }
+        
+        .grid-3x3 {
+            display: grid;
+            gap:1rem;
+            grid-template-columns: repeat(auto-fit, minmax(var(--default-column-size), 1fr));
+            margin: var(--standard-margin);
+            grid-auto-rows: var(--default-row-size);
+            grid-auto-columns: var(--default-column-size);
+
+        }
+
+        .image-card {
+            border: 1px solid var(--primary-foreground-colour);
+            border-radius: 3px;
+            width:var(--default-column-size);
+            height:var(--default-row-size);
+            transition-property: box-shadow;
+            transition-duration: 0.3s;
+            transition-delay: 0;
+        }
+
+        .image-card:hover {
+            box-shadow: 0 0 10px var(--primary-foreground-colour);
+        }
+        
+        .image-card img {
+            object-fit:cover;
+            max-width:100%;
+            height:100%;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/featured">Featured Images</a>
+            <a class="nav-link" href="#">Other Page</a>
+            <a class="nav-link" href="#">Other Page</a>
+        </nav>
+        {% block title %}
+            
+        {% endblock title %}
+    </header>  
+    <main>
+
+        {% block content %}
+                
+        {% endblock content %}
+
+    </main>
+</body>
+</html>

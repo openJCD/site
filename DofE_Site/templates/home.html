@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+<body>
+    {% block title %}
+    
+        <div class="title-wrapper">
+            <h1>
+                Welcome.
+            </h1>
+        </div>    
+    
+    {% endblock title %}
+    {% block content %}
+        <div>
+            <p>
+                If you're new here, head over to my <a href="#">About Page</a>, then over to my <a href="/featured">Featured Page</a>. <br/>
+                If not, check out my <a href="#">Full Portfolio</a> to see if there's anything new here.
+            </p>
+        </div>
+    {% endblock content %}
+</body>
+</html>
