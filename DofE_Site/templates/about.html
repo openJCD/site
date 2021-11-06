@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <div class="title-wrapper">
+        <h1>
+            About
+        </h1>
+    </div> 
+{% endblock title %}
+
+{% block content %}
+    <div class="about-container">
+        <img class="profile-pic" src="{{url_for("static", filename="JCD_modern.png")}}"></img>
+        <span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus veniam vero numquam inventore autem, aliquid iste quas illum est quasi eveniet delectus amet quia vitae animi. Laboriosam pariatur harum vero?
+        </span>
+    </div>
+{% endblock content %}

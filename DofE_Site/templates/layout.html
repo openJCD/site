@@ -69,6 +69,21 @@
             transition-duration: 0.3s;
             transition-delay: 0;
         }
+        
+        .about-container {
+            border: 1px solid var(--secondary-foreground-colour);
+            border-radius: 3px;
+            padding: var(--standard-margin);
+            margin: calc(var(--standard-margin)*3);
+            width:480px;
+        }
+
+        .profile-pic {
+            border: 2px solid var(--primary-foreground-colour);
+            border-radius: 50%;
+            width:240px;
+        }
+
         .nav-link:hover {
             background-color: var(--primary-hover-colour);
         }
@@ -116,7 +131,7 @@
         <nav class="navbar">
             <a class="nav-link" href="/">Home</a>
             <a class="nav-link" href="/featured">Featured Images</a>
-            <a class="nav-link" href="#">Other Page</a>
+            <a class="nav-link" href="/about">About</a>
             <a class="nav-link" href="#">Other Page</a>
         </nav>
         {% block title %}
