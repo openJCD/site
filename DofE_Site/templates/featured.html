@@ -9,23 +9,11 @@
 {% endblock title %}
 {% block content %}
     <div class="grid-3x3">
-        <div class="image-card">
-            <img class="modal-thumbnail" src="\static\sunset_placeholder.JPG">
-        </div>
-        <div class="image-card">
-            <img class="modal-thumbnail" src="\static\seagull_wales.JPG">
-        </div>
-        <div class="image-card">
-            <img class="modal-thumbnail" src="\static\sunset_placeholder.JPG">
-        </div>
-        <div class="image-card">
-            <img class="modal-thumbnail" src="\static\sunset_placeholder.JPG">
-        </div>
-        <div class="image-card">
-            <img class="modal-thumbnail" src="\static\sunset_placeholder.JPG">
-        </div>
-        <div class="image-card">
-            <img class="modal-thumbnail" src="\static\sunset_placeholder.JPG">
-        </div>
+        {% for post in posts %}
+            
+            <div class="image-card">
+                <img class="modal-thumbnail" src="{{post.image_url}}">
+            </div>
+        {% endfor %}
     </div>
 {% endblock content %}

@@ -4,7 +4,7 @@ from DofE_Site import app
 posts = [
     {
         'title':'First Image',
-        'image_url':'DofE_Site/static/sunset_placeholder.JPG',
+        'image_url':'/static/sunset_placeholder.JPG',
         'description':'The first image to be uploaded.'
     }
 ]
@@ -15,7 +15,7 @@ def home():
 
 @app.route('/featured')
 def featured():
-    return render_template("featured.html")
+    return render_template("featured.html", posts=posts)
 
 @app.route('/about')
 def about():
