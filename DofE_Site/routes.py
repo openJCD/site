@@ -5,7 +5,8 @@ posts = [
     {
         'title':'First Image',
         'image_url':'/static/sunset_placeholder.JPG',
-        'description':'The first image to be uploaded.'
+        'description':'The first image to be uploaded.',
+        'modal_id':'modal-1'
     }
 ]
 
