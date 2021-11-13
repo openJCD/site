@@ -1,4 +1,4 @@
-# I will likely be scrapping this as it overcomplicates a process which should be simple.
+# I will likely be scrapping this as it overcomplicates a process which should be simple. I'm keeping the code here though, just in case.
 class Post():
     def __init__(self, dict: dict = {'title':'', 'image_url':'', 'description':''}):
         self.data = dict

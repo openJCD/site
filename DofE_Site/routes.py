@@ -7,6 +7,18 @@ posts = [
         'image_url':'/static/sunset_placeholder.JPG',
         'description':'The first image to be uploaded.',
         'modal_id':'modal-1'
+    },
+    {
+        'title':'Second Image',
+        'image_url':'/static/seagull_wales.JPG',
+        'description':'The second image to be uploaded.',
+        'modal_id':'modal-2'
+    },
+        {
+        'title':'Third Image',
+        'image_url':'/static/seagull_wales.JPG',
+        'description':'The third image to be uploaded.',
+        'modal_id':'modal-3'
     }
 ]
 

@@ -146,17 +146,19 @@
             pointer-events: auto;
         }
         .modal > div {
-            width: 400px;
+            width: fit-content;
+            border: 1px solid var(--primary-foreground-colour);
+            border-radius: 3px;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            padding: 2em;
-            background: white;
+            padding: var(--standard-margin);
+            background: var(--primary-background-colour);
         }
-
+        
         .close > a{
-            color: var(--primary-background-colour);
+            color: var(--tertiary-text-colour);
         }
 
         .modal-image {
