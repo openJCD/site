@@ -33,3 +33,7 @@ def featured():
 @app.route('/about')
 def about():
     return render_template("about.html")
+
+@app.route('/portfolio')
+def portfolio():
+    return render_template("portfolio.html")
