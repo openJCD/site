@@ -156,15 +156,32 @@
             padding: var(--standard-margin);
             background: var(--primary-background-colour);
         }
-        
-        .close > a{
-            color: var(--tertiary-text-colour);
+
+        .modal > div.close-modal {
+            top: 30%;
+            left: 75%;
+
         }
 
         .modal-image {
             width:500px;
         }
         /*end modal code*/
+
+        /*begin portfolio code*/
+        .portfolio-grid {
+            display:grid;
+            gap:1rem;
+            grid-template-columns: 2fr 1fr 1fr;
+            margin: var(--standard-margin);
+        }
+
+        .portfolio-square {
+            grid-column: 1/1;
+            grid-row:1/1
+        }
+        
+        /*end portfolio code*/
     </style>
 </head>
 <body>
@@ -173,7 +190,7 @@
             <a class="nav-link" href="/">Home</a>
             <a class="nav-link" href="/featured">Featured Images</a>
             <a class="nav-link" href="/about">About</a>
-            <a class="nav-link" href="#">Other Page</a>
+            <a class="nav-link" href="/portfolio">Portfolio</a>
         </nav>
         {% block title %}
             
