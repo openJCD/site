@@ -172,13 +172,17 @@
         .portfolio-grid {
             display:grid;
             gap:1rem;
-            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             margin: var(--standard-margin);
         }
 
         .portfolio-square {
-            grid-column: 1/1;
-            grid-row:1/1
+            object-fit: cover;
+        }
+
+        .portfolio-rect {
+            width:480px;
+            object-fit:cover;
         }
         
         /*end portfolio code*/
