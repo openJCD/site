@@ -9,11 +9,9 @@ posts = [
 
         'description':'The first image to be uploaded.',
 
-        'grid-placement':'grid-columns:1/1;grid-rows:1/1;',
+        'modal_id':'modal-1',
 
-        'portfolio-object':'square',
-
-        'modal_id':'modal-1'
+        'is_featured':'true'
     },
     {
         'title':'Second Image',
@@ -22,19 +20,44 @@ posts = [
 
         'description':'The second image to be uploaded.',
 
-        'grid-placement':'grid-columns:2/2;grid-rows:1/1;',
+        'modal_id':'modal-2',
 
-        'portfolio-object':'rect',
-
-        'modal_id':'modal-2'
+        'is_featured':'true'
     },
-        {
+    {
         'title':'Third Image',
+
         'image_url':'/static/seagull_wales.JPG',
+
         'description':'The third image to be uploaded.',
-        'modal_id':'modal-3'
+
+        'modal_id':'modal-3',
+
+        'is_featured':'true'
+    },
+    {
+        'title':'Fourth Image',
+
+        'image_url':'/static/JCD_modern.png',
+
+        'description':'The fourth image to be uploaded.',
+
+        'modal_id':'modal-3',
+
+        'is_featured':'true'
     }
 ]
+
+def get_posts_by_tag(tag, posts):
+    sorted_posts=[]
+    
+    for post in posts:
+        if tag in post and post[tag] =='true':
+            sorted_posts.append(post)
+
+        
+    return sorted_posts
+
 
 @app.route('/')
 def home():
@@ -42,11 +65,11 @@ def home():
 
 @app.route('/featured')
 def featured():
-    return render_template("featured.html", posts=posts)
+    return render_template("featured.html", featured_posts=get_posts_by_tag('is_featured', posts))
 
 @app.route('/portfolio')
 def portfolio():
-    return render_template("portfolio.html", posts=posts)
+    return render_template("portfolio.html", all_posts=posts)
 
 @app.route('/about')
 def about():
