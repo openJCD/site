@@ -10,8 +10,8 @@
 {% endblock title %}
 
 {% block content %}
-    <main class="portfolio-grid">
-    {% for post in posts %}
+    <main class="gridd-3x3">
+    {% for post in all_posts %}
         <div class="modal" id="{{post.modal_id}}">
             <div> 
                 <img class="modal-image" src="{{post.image_url}}">    
@@ -19,7 +19,8 @@
             <div class="close-modal"><a href="#">&#x2715</a></div>
         </div>
         <a href="#{{post.modal_id}}">
-            <img class="modal-thumbnail image-card portfolio-{{post.portfolio_object}}"  style:"{{post.grid_placement}}" src="{{post.image_url}}" >
+            <img class="modal-thumbnail image-card" src="{{post.image_url}}" >
+            {%  %}
         </a>
     {% endfor %}
 
