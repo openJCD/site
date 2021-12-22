@@ -1,4 +1,4 @@
-from flask import render_template, url_for
+from flask import render_template, url_for, request, flash, redirect
 from DofE_Site import app
 
 posts = [
@@ -74,3 +74,10 @@ def portfolio():
 @app.route('/about')
 def about():
     return render_template("about.html")
+
+@app.route("/form_test_page_1", methods=('GET', 'POST'))
+def test():
+    if request.method == 'POST':
+        red_tag = request.form['red_tag']
+
+    return render_template("test.html")
