@@ -42,9 +42,9 @@ posts = [
 
         'description':'The fourth image to be uploaded.',
 
-        'modal_id':'modal-3',
+        'modal_id':'modal-4',
 
-        'is_featured':'true'
+        'is_featured':'false'
     }
 ]
 
@@ -54,7 +54,6 @@ def get_posts_by_tag(tag, posts):
     for post in posts:
         if tag in post and post[tag] =='true':
             sorted_posts.append(post)
-
         
     return sorted_posts
 

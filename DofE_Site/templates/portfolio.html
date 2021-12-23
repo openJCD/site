@@ -10,7 +10,7 @@
 {% endblock title %}
 
 {% block content %}
-    <main class="gridd-3x3">
+    <main class="grid-3x3">
     {% for post in all_posts %}
         <div class="modal" id="{{post.modal_id}}">
             <div> 
@@ -18,10 +18,11 @@
             </div>
             <div class="close-modal"><a href="#">&#x2715</a></div>
         </div>
-        <a href="#{{post.modal_id}}">
-            <img class="modal-thumbnail image-card" src="{{post.image_url}}" >
-            {%  %}
-        </a>
+        <div class="image-card">
+            <a href="#{{post.modal_id}}">
+                <img class="modal-thumbnail" src="{{post.image_url}}" >
+            </a>
+        </div>
     {% endfor %}
 
         
