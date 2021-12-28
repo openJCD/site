@@ -44,7 +44,8 @@ posts = [
 
         'modal_id':'modal-4',
 
-        'is_featured':'false'
+        'is_featured':'false',
+        'red_tag':'true'
     }
 ]
 
@@ -66,8 +67,14 @@ def home():
 def featured():
     return render_template("featured.html", featured_posts=get_posts_by_tag('is_featured', posts))
 
-@app.route('/portfolio')
+@app.route('/portfolio', methods=["GET", "POST"])
 def portfolio():
+    if request.method == 'POST':
+        red_tag = request.form.getlist('red_tag')
+        flash( str(red_tag) )
+        print(str(red_tag))
+        return(render_template("portfolio.html", all_posts=get_posts_by_tag(posts, str(red_tag))))
+
     return render_template("portfolio.html", all_posts=posts)
 
 @app.route('/about')
@@ -78,5 +85,7 @@ def about():
 def test():
     if request.method == 'POST':
         red_tag = request.form['red_tag']
+        flash( str(red_tag) )
+        return(redirect(url_for('test')))
 
     return render_template("test.html")
