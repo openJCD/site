@@ -12,8 +12,9 @@
         {% for post in featured_posts %}
             {% if post %}
                 <div class="modal" id="{{post.modal_id}}">
-                    <div> 
-                        <img class="modal-image" src="{{post.image_url}}">    
+                    <div class="modal-image-container"> 
+                        <p class="modal-post-title">{{post.title}}</p>
+                        <img class="modal-image" src="{{post.image_url}}"> 
                     </div>
                     <div class="close-modal"><a href="#">&#x2715</a></div>
                 </div>

@@ -4,7 +4,7 @@ from DofE_Site import app
 
 posts = [
     {
-        'title':'First Image',
+        'title':'A Nice Sunset',
 
         'image_url':'/static/sunset_placeholder.JPG',
 
@@ -15,7 +15,7 @@ posts = [
         'is_featured':'true'
     },
     {
-        'title':'Second Image',
+        'title':'Seagull atop the Llandudno summit complex',
 
         'image_url':'/static/seagull_wales.JPG',
 
@@ -26,18 +26,7 @@ posts = [
         'is_featured':'true'
     },
     {
-        'title':'Third Image',
-
-        'image_url':'/static/seagull_wales.JPG',
-
-        'description':'The third image to be uploaded.',
-
-        'modal_id':'modal-3',
-
-        'is_featured':'true'
-    },
-    {
-        'title':'Fourth Image',
+        'title':'JCD logo',
 
         'image_url':'/static/JCD_modern.png',
 
@@ -46,8 +35,29 @@ posts = [
         'modal_id':'modal-4',
 
         'is_featured':'false',
-        'red_tag':'true'
-    }
+    },
+    {
+        'title':'Two trees of contrasting age in Ickworth Park',
+
+        'image_url':'/static/ickworth_tree.JPG',
+
+        'description':'-generic-',
+
+        'modal_id':'modal-5',
+
+        'is_featured':'true'
+    },
+        {
+        'title':'Macro picture of a leaf - not entirely sure why',
+
+        'image_url':'/static/leaf.JPG',
+
+        'description':'-generic-',
+
+        'modal_id':'modal-6',
+
+        'is_featured':'true'
+    },
 ]
 
 def get_posts_by_tag(tag, posts):

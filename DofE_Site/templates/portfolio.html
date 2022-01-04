@@ -15,8 +15,8 @@
     {% for post in all_posts %}
         <div class="modal" id="{{post.modal_id}}">
             <div class="modal-image-container"> 
+                <p class="modal-post-title">{{post.title}}</p>
                 <img class="modal-image" src="{{post.image_url}}"> 
-                {{post.title}}
                 
             </div>
             <!-- <div class="post-title">
