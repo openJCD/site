@@ -1,9 +1,5 @@
 from flask import render_template, url_for, request, flash, redirect
-from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
-import wtforms
-from wtforms.validators import DataRequired
-from .forms import FilterForm
+
 from DofE_Site import app
 
 posts = [
