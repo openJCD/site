@@ -14,9 +14,13 @@
     <main class="grid-3x3">
     {% for post in all_posts %}
         <div class="modal" id="{{post.modal_id}}">
-            <div> 
-                <img class="modal-image" src="{{post.image_url}}">    
+            <div class="modal-image-container"> 
+                <img class="modal-image" src="{{post.image_url}}"> 
+                {{post.title}}
+                
             </div>
+            <!-- <div class="post-title">
+            </div> -->
             <div class="close-modal"><a href="#">&#x2715</a></div>
         </div>
         <div class="image-card">
