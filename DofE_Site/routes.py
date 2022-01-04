@@ -1,4 +1,9 @@
 from flask import render_template, url_for, request, flash, redirect
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField
+import wtforms
+from wtforms.validators import DataRequired
+from .forms import FilterForm
 from DofE_Site import app
 
 posts = [
@@ -67,14 +72,8 @@ def home():
 def featured():
     return render_template("featured.html", featured_posts=get_posts_by_tag('is_featured', posts))
 
-@app.route('/portfolio', methods=["GET", "POST"])
-def portfolio():
-    if request.method == 'POST':
-        red_tag = request.form.getlist('red_tag')
-        flash( str(red_tag) )
-        print(str(red_tag))
-        return(render_template("portfolio.html", all_posts=get_posts_by_tag(posts, str(red_tag))))
-
+@app.route('/portfolio')
+def portfolio():     
     return render_template("portfolio.html", all_posts=posts)
 
 @app.route('/about')

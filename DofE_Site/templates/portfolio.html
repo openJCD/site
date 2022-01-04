@@ -10,23 +10,6 @@
 {% endblock title %}
 
 {% block content %}
-    <a href="#filter-menu">
-        Filters
-    </a>
-    <div class="filter-menu" id="filter-menu">
-
-        <form method="post">
-            <span>
-                <a href="#">&#x2715</a>
-            </span>
-            <label for="red_tag">Red</label>
-            <input type="checkbox" name="red_tag">
-            
-            <button type="submit" class="styled-button">
-                Submit
-            </button>
-        </form>
-    </div> 
 
     <main class="grid-3x3">
     {% for post in all_posts %}
